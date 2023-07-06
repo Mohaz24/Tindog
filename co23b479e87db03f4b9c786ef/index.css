@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
+}
+
+:root {
+    --display: flex;
+    --align-self: start;
+    --margin: 1em;
+}
+
+/* 
+    =========== 
+    Header 
+    ============ 
+*/
+
+#section-one,
+.container,
+.icon-btns {
+    display: var(--display);
+    align-items: center;
+}
+
+.container {
+    justify-content: space-between;
+    margin: var(--margin);
+}
+
+.icons {
+    width: 50px;
+}
+
+.icon-paw {
+    width: 100px;
+}
+
+/* 
+    =========== 
+    Main content 
+    ============ 
+*/
+
+/* ID selectors  */
+
+#section-one {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#delete:hover {
+    background: #ffe7ef;
+}
+
+#like:hover {
+    background: #dbfff4;
+}
+
+#like,
+#delete {
+    cursor: pointer;
+}
+
+/* Card content */
+.card-image {
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    transition: 0.7s ease-out;
+}
+
+.card-content {
+    align-self: var(--align-self);
+    margin-left: 1em;
+    text-shadow: 0px 2px grey;
+}
+
+.card-title {
+    margin-bottom: 0em;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 36px;
+    color: #f8f8f8;
+}
+
+.card-bio {
+    margin-top: 0.3em;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 32px;
+    color: #b7b7b7;
+}
+
+/* Badges */
+.badges {
+    align-self: var(--align-self);
+}
+
+.icon-liked,
+.icon-disliked {
+    width: 130px;
+    margin: 2em;
+    transform: rotate(330deg);
+    display: none;
+}
+
+.reveal {
+    display: var(--display);
+}
+
+/* buttons */
+.btns {
+    border-radius: 100%;
+    background: #ffffff;
+    border: none;
+    box-shadow: 0px 10px 20px #e9e9ea;
+    width: 90px;
+    height: 90px;
+    margin: var(--margin);
+}
+
+.icon-btns {
+    justify-content: center;
+    grid-gap: 10px;
+}
+
+
+/* User's favourites images */
+.liked-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit(minmax(200px, 1fr)));
+    gap: 10px;
+    justify-items: center;
+}
+
+.liked-title,
+.disliked-cards {
+    text-align: center;
+}
+
+.card-image,
+.liked-photos {
+    width: 305px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+
+.disliked-cards {
+    margin: 1.8em 0em;
+}
+
+.icon-btns,
+.liked-cards {
+    margin-bottom: 1.5em;
+}
+
+/* NO MATCHES GIF */
+.gif {
+    border-radius: 5px;
+}
+
+
+/* 
+    ==============
+    MEDIA QUERIES
+    ==============
+*/
+
+/* Medium screen size */
+@media(min-width: 700px) {
+    .card-imgs {
+        width: 320px;
+        height: 438px;
+        border-radius: 10px;
+    }
+}
+
+/* Larger screen size */
+@media(min-width: 1100px) {
+    .card-imgs {
+        width: 320px;
+        height: 438px;
+        border-radius: 10px;
+    }
+}
